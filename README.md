@@ -13,7 +13,11 @@ As I continue to lurk around in this community, I realized quickly that hangman 
 and I grabbed [Chris Horton's Hangman images](https://gist.github.com/chrishorton/8510732aa9a80a03c829b09f12e20d9c)
 
 ### Gathering the list
-Even when I do graphic design work, I always use ChatGPT for copy and I'm planning on using it here to provide a me a list of Survior words. I could have made it 
+Even when I do graphic design work, I always use ChatGPT for copy and I'm planning on using it here to provide a me a list of Survior words. I added some of my favorite players in there for fun also. I could have made it 
 
 ### Developing a plan
+I always write out a game plan of what I want my python code to do in normal english words and then I "translate" into python. Doing it this way really helps me translate what I want to do in python
 
+### Takeaways 
+- I go the chance to use the random library, which I had read about in a [book name here by Al]
+- I was going to use phrases also, but the spaces tripped me up. This will be something I will try to learn more about later.
