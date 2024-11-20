@@ -65,7 +65,6 @@ failedTries = 0
 
 #Display
 print("Welcome to Survivor Hangman!")
-print("FOR TESTING PURPOSES: the keyword is", keyword)
 print(HANGMANPICS[0])
 blanks = ["_"]*len(keyword)
 blankDisplay = " ".join(blanks)
