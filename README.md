@@ -21,3 +21,6 @@ I always write out a game plan of what I want my python code to do in normal eng
 ### Takeaways 
 - I go the chance to use the random library, which I had read about in a [book name here by Al]
 - I was going to use phrases also, but the spaces tripped me up. This will be something I will try to learn more about later.
+- enummurate() vs index()
+- game logic
+- python is constantly humbling me

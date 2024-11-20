@@ -50,9 +50,10 @@ HANGMANPICS = ['''
       |
 =========''']
 
-wordBank = ["Council", "Immunity", "Idol","Merge","Blindside","Alliance","Outwit", "Outplay", "Outlast", "Tribal", "Reward", "Challenge", "Immunity","Vote"
-, "Jury","Castaway","Buff","Torch","Snuffed","Puzzle","Auction","Camp","Social Game", "Jeff", "Probst","Journey","Parvati", "Cirie"] # 27 items
+wordBank = ["fiji", "cbs", "council", "immunity", "idol", "merge", "blindside", "alliance", "outwit", "outplay", "outlast", "tribal", "reward", "challenge", "vote", "jury", "castaway", "buff", "torch", "snuffed", "puzzle", "auction", "camp", "social game", "jeff", "probst", "journey", "parvati", "cirie"] 
 keyword = random.choice(wordBank)
+
+
 # chooses keyword before game begins
 # 6 drawings = 6 lives
 
@@ -67,37 +68,36 @@ print("Welcome to Survivor Hangman!")
 print("FOR TESTING PURPOSES: the keyword is", keyword)
 print(HANGMANPICS[0])
 blanks = ["_"]*len(keyword)
-print(blanks)
+blankDisplay = " ".join(blanks)
+print(blankDisplay)
 print("You have",lives, "lives remaining")
-userLetter = input("Enter your guess: ")
-while failedTries < 6:
-  print("You have",lives, "lives remaining")
-  userLetter = input("Enter your guess: ")
-  for index, letter in enumerate(keyword):
-    if userLetter == letter: #when you guess right
-      blanks[index] = userLetter
-      print(blanks)
-    else: #you guessed wrong, new hangman appears
-      usedLetters += userLetter
-      print("You have used ", usedLetters)
-      failedTries+=1
-      print(HANGMANPICS[failedTries])
-      lives -= 1
 
-# for letter in keyword: 
-#     if userLetter == letter: #you guessed right, underscore is replaced and printed
-#         blank.replace(keyword[letter], userLetter) # the correct section is buggy as hell
-#         print(blank)
-#         userLetter = input("Enter your guess: ")
-#     if userLetter != letter: #you guessed wrong, new hangman appears
-#         usedLetters += userLetter
-#         print("You have used ", usedLetters)
-#         failedTries+=1
-#         print(HANGMANPICS[failedTries])
-#         lives -= 1
-#         print(blank)
-#         userLetter = input("Enter your guess: ")
-#         if lives == 0:
-#             print("The word was ", keyword,". The tribe has spoken")
-#             break
-# what happens if you win?!
+
+
+while "_" in blankDisplay and lives > 0: # WHILE <-- (this) AND (this) are true...the game continues...
+      userLetter = input("Enter your guess: ")
+      
+      # when you guess wrong
+      if userLetter not in keyword:
+            usedLetters += userLetter
+            print("You have used ", usedLetters)
+            failedTries+=1
+            print(HANGMANPICS[failedTries])
+            lives -= 1
+            print("You have",lives, "lives remaining")
+
+      # when you guess right
+      for index, letter in enumerate(keyword):
+            if userLetter == letter: 
+                  blanks[index] = userLetter
+                  blankDisplay = " ".join(blanks)
+      print(blankDisplay)
+             
+# outcomes
+if "_" not in blankDisplay: #that means you won
+      print("Congrats! You are the Sole Survivor!")
+else: #you lost and you get the sad outcome
+      print("The word was", keyword,". Sorry, the tribe has spoken.")
+  
+      
+      
