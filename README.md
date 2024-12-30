@@ -19,7 +19,7 @@ Even when I do graphic design work, I always use ChatGPT for copy and I'm planni
 I always write out a game plan of what I want my python code to do in normal english words and then I "translate" into python. Doing it this way really helps me translate what I want to do in Python. Frequently, when I get really stuck I will go back to that paper and rethink some of the small issues I've come across.
 
 ### Takeaways & What I Learned
-- I got the chance to use the random library, which I had read about in a Al's book, ("Automate the Boring Stuff with Python")[https://automatetheboringstuff.com]. It's free to read and I'd definitely reccomend it to any beginner! I'll likely go through a lot of the fun projects he provides.
+- I got the chance to use the random library, which I had read about in a Al's book, ["Automate the Boring Stuff with Python"](https://automatetheboringstuff.com). It's free to read and I'd definitely reccomend it to any beginner! I'll likely go through a lot of the fun projects he provides.
 
 - I was going to use phrases also, but the spaces tripped me up. This will be something I will try to learn more about in the future.
 - the **enummurate()** fuction was a new fuction I came across while working this project. **index()** was originally what I wanted to use, but it only finds the first instance of when the hangman letter would show up.
